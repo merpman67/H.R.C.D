@@ -76,6 +76,37 @@ async function Naming(name) {
             await sleep(3000);
             state = 'COMPLETE';
             break;
+            
+        case "akira":
+            writeToOutput("Ah, the future widow to be!");
+            await sleep(3000);
+            writeToOutput("Make sure you set your feelings straight before he leaves");
+            await sleep(3000);
+            state = 'COMPLETE';
+            break;
+
+        case "chara":
+            writeToOutput(" . . . ");
+            await sleep(3000);
+            writeToOutput("Oh charlie...I know for a fact you typed this in...");
+            await sleep(3000);
+            writeToOutput("And for anyone else who has that forbidden knowledge...");
+            await sleep(3000);
+            writeToOutput("A forbidden fact for you...");
+            await sleep(3000);
+            writeToOutput("He is trying to help you...");
+            await sleep(3000);
+            state = 'COMPLETE';
+            break;
+    
+        case "charles":
+            writeToOutput("Evening Charles. I know for a fact you have been trying, so a little word of advice...");
+            await sleep(3000);
+            writeToOutput("You are a part of the key...");
+            await sleep(3000);
+            state = 'COMPLETE';
+            break;
+            
         default:
             // Default case from Python
             writeToOutput("Hello, " + name + ". My name is H.R.C.D");
@@ -121,7 +152,7 @@ async function handleInput() {
             break;
 
         case 'GD_PASSKEY_1':
-            if (userInput === "Everything, Anything, and Nothing") {
+            if (userInput == "Everything, Anything, and Nothing") {
                 writeToOutput("So it goes...You haven't lost your touch just yet have you?");
                 await sleep(2000);
                 writeToOutput("After all, its been so long ever since he left, hasn't it?");
@@ -136,7 +167,7 @@ async function handleInput() {
             break;
 
         case 'GD_PASSKEY_2':
-            if (userInput === "Time") {
+            if (userInput == "Time") {
                 writeToOutput("Mpq Ezmzxl, bti Xfbikqyigbe, egl iltb xmxa urumfaxmz.");
                 state = 'COMPLETE';
             } else {
@@ -147,7 +178,7 @@ async function handleInput() {
             break;
         
         case 'SHIFT_PROMPT':
-            if (userInput === "5") {
+            if (userInput == "5") {
                 const name = document.getElementById('output').lastElementChild.previousElementSibling.innerText.split('Hello, ')[1].split('. My name is')[0].trim();
                 writeToOutput(`Ah, yes! Seems like you had been quite the idiot, ${name}. But not to worry! I can't laugh at you.`);
                 await sleep(7000);
@@ -195,7 +226,7 @@ function initApp() {
 
 // Listen for the 'Enter' key press on the input field
 document.getElementById('user-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
+    if (e.key == 'Enter') {
         handleInput();
     }
 });
