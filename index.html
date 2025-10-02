@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.R.C.D Interface</title>
+    <style>
+        /* Basic styling to mimic a terminal */
+        body {
+            background-color: #000;
+            color: #0F0;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+        }
+        #output {
+            min-height: 200px;
+            white-space: pre-wrap; /* Keeps line breaks and spaces from JS output */
+            border: 1px solid #0F0;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+        }
+        .input-line {
+            display: flex;
+        }
+        #user-input {
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            color: #0F0;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            outline: none;
+            padding-right: 5px;
+        }
+        button {
+            background-color: #0F0;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <div class="input-line">
+        <label for="user-input">&gt; </label>
+        <input type="text" id="user-input" autofocus>
+        <button onclick="handleInput()">Enter</button>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
